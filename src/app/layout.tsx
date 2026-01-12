@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
+import { EB_Garamond } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-eb-garamond',
+});
 
 export const metadata: Metadata = {
   title: 'Varsha Bansal',
@@ -13,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white antialiased">
+    <html lang="en" className={ebGaramond.variable}>
+      <body className="min-h-screen bg-white antialiased font-serif">
         <Header />
         <main className="bg-white">{children}</main>
       </body>

@@ -9,8 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['Irvin', 'Georgia', 'serif'],
-        sans: ['Irvin', 'Georgia', 'sans-serif'],
+        serif: ['var(--font-eb-garamond)', 'Georgia', 'serif'],
       },
     },
   },
